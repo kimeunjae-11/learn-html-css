@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture와 Source 요소</title>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <h1>Picture와 Source 요소</h1>
+   <!-- 크기에 따라 달라지는 이미지 따로 공부하기 -->
+    <h2>media 속성</h2>
+    <picture>
+  <source srcset="/src/assets/rwd/small-550.jpg 550w" 
+  media="(max-width: 500px)" />
+  <source srcset="/src/assets/rwd/medium-1024.jpg 1024w" 
+  media="(max-width: 768px)" />
+  <source srcset="/src/assets/rwd/large-1600.jpg 1600w" 
+  media="(max-width: 1280px)" />
+  <img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+</picture>
+    <h2>webp 포맷</h2>
+    <picture>
+      <source sizes="50vw" srcset="/src/assets/logo/netflix@1x.webp 420w, /src/assets/logo/netflixx@2x.webp 2X webp 656w"/>
+      <img src="/src/assets/logo/netflix@1x.png" alt="NETFLIX" />
+    </picture>
+    <hr />
+
+    <h2>넷플릭스 로고</h2>
+    <picture>
+      <!-- src 두개 넣을 때 두번째는 자동이 안뜸 -->
+  <source srcset="/src/assets/logo/netflix@1x.png 1x, /src/assets/logo/netflix@2x.png 2x" />
+  <img src="/src/assets/logo/netflix@1x.png" alt="NETFLIX" />
+</picture>
+      <img src="/src/assets/logo/netflix@1x.png" alt="" />
+    </picture>
+    <hr />
+
+    <picture>
+      <source srcset="/src/assets/rwd/image-1x.png 1x,/src/assets/rwd/image-2x.png 2x,/src/assets/rwd/image-3x.png 3x"/>
+      <img src="/src/assets/rwd/image-src.png" alt="" />
+    </picture>
+    <hr />
+
+    <h2>이디야 배너</h2>
+    <picture>
+      <source srcset="/src/assets/rwd/banner-narrow.jpg" media="(orientation: portrait)" />
+      <img src="/src/assets/rwd/banner-wide.jpg" alt="" width="200" />
+    </picture>
+    <hr />
+  </body>
+</html>
