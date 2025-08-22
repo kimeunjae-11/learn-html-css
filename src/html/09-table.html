@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <title>테이블 관련 요소</title>
+     <!-- css요소 style 열어서 사용하기 -->
+     <style>
+     table,
+     th,
+     td {
+       border: 1px solid currentColor;
+     }
+
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <h1>테이블 관련 요소</h1>
+    <table style="border: 1px solid currentColor">
+      <!-- th 제목 -->
+      <tr>
+        <th id="name">이름</th>
+        <th id="ko">국어</th>
+        <th id="en">영어</th>
+      </tr>
+      <!-- td 내용 -->
+      <tr>
+        <th id="hong">홍길동</th>
+        <th headers="hong ko">90</td>
+        <th headers="hong en">80</td>
+      </tr>
+      <!-- id, hearder 왜 쓰는지 알기 -->
+      <tr>
+        <th id="lee">이영희</th>
+        <th headers="lee ko">70</td>
+        <th headers="lee en">100</td>
+      </tr>
+      <tr>
+        <th id="ave">평균</th>
+        <th headers="ave ko">80</td>
+        <th headers="ave en">90</td>
+      </tr>
+      <tr>
+        <th scope="row">평균 합계</th>
+        <th colspan="2">170</td>
+      </tr>
+    </table>
+  </body>
+</html>
